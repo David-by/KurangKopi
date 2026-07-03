@@ -15,11 +15,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Beranda', href: '#home' },
-    { name: 'Tentang', href: '#about' },
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
     { name: 'Menu', href: '#menu' },
-    { name: 'Galeri', href: '#gallery' },
-    { name: 'Kontak', href: '#contact' },
+    { name: 'Gallery', href: '#gallery' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -40,7 +40,7 @@ const Navbar = () => {
           <img 
             src="/logo.png" 
             alt="Kurang Kopi Logo" 
-            className="h-14 md:h-16 w-auto object-contain"
+            className="h-9 md:h-11 w-auto object-contain"
           />
         </motion.a>
 

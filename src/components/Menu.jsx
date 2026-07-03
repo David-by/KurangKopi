@@ -12,23 +12,22 @@ const Menu = () => {
     { id: 4, name: 'Americano Ice', price: 'Rp 30.000', category: 'Kopi', image: '/images/americano ice.jpg?auto=format&fit=crop&q=80' },
     { id: 5, name: 'Americano Hot', price: 'Rp 25.000', category: 'Kopi', image: '/images/americano hot.jpg?auto=format&fit=crop&q=120' },
     { id: 7, name: 'Dirty Latte', price: 'Rp 18.000', category: 'Kopi', image: '/images/dirty latte.jpg?auto=format&fit=crop&q=80' },
-    { id: 8, name: 'Moccachino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/moccachino.jpg?auto=format&fit=crop&q=80' },
+    { id: 8, name: 'Moccachino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/moccachino ice.jpg?auto=format&fit=crop&q=80' },
     { id: 9, name: 'Cappucino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/cappucino ice.jpg?auto=format&fit=crop&q=80' },
-    { id: 10, name: 'Americano', price: 'Rp 18.000', category: 'Kopi', image: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80' },
 
-    { id: 11, name: 'Chocolate Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/chocolate ice.jpg?auto=format&fit=crop&q=80' },
-    { id: 13, name: 'Matcha Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/matche ice.jpg?auto=format&fit=crop&q=80' },
-    { id: 14, name: 'Redvelvet', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/redvelvet.jpg?auto=format&fit=crop&q=80' },
-    { id: 15, name: 'Matchaberry', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/matcha berry.jpg?auto=format&fit=crop&q=80' },
+    { id: 10, name: 'Chocolate Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/chocolate ice.jpg?auto=format&fit=crop&q=80' },
+    { id: 11, name: 'Matcha Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/matche ice.jpg?auto=format&fit=crop&q=80' },
+    { id: 12, name: 'Redvelvet', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/redvelvet.jpg?auto=format&fit=crop&q=80' },
+    { id: 13, name: 'Matchaberry', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/matchaberry.jpg?auto=format&fit=crop&q=80' },
 
-    { id: 16, name: 'Sruni', price: 'Rp 18.000', category: 'Mocktail', image: '/images/sruni.jpg?auto=format&fit=crop&q=80' },
-    { id: 17, name: 'Lychee Tea', price: 'Rp 18.000', category: 'Mocktail', image: '/images/lychee tea.jpg?auto=format&fit=crop&q=80' },
-    { id: 18, name: 'Samiran', price: 'Rp 18.000', category: 'Mocktail', image: '/images/samiran.jpg?auto=format&fit=crop&q=80' },
-    { id: 19, name: 'Kurko Skyblue', price: 'Rp 18.000', category: 'Mocktail', image: '/images/kurko skyblue.jpg?auto=format&fit=crop&q=80' },
-    { id: 12, name: 'Pressoberry', price: 'Rp 18.000', category: 'Mocktail', image: '/images/pressoberry.jpg?auto=format&fit=crop&q=80' },
+    { id: 14, name: 'Sruni', price: 'Rp 18.000', category: 'Mocktail', image: '/images/sruni.jpg?auto=format&fit=crop&q=80' },
+    { id: 15, name: 'Lychee Tea', price: 'Rp 18.000', category: 'Mocktail', image: '/images/lychee tea.jpg?auto=format&fit=crop&q=80' },
+    { id: 16, name: 'Samiran', price: 'Rp 18.000', category: 'Mocktail', image: '/images/samiran.jpg?auto=format&fit=crop&q=80' },
+    { id: 17, name: 'Kurko Skyblue', price: 'Rp 18.000', category: 'Mocktail', image: '/images/kurko skyblue.jpg?auto=format&fit=crop&q=80' },
+    { id: 18, name: 'Pressoberry', price: 'Rp 18.000', category: 'Mocktail', image: '/images/pressoberry.jpg?auto=format&fit=crop&q=80' },
 
-    { id: 20, name: 'French Fries', price: 'Rp 18.000', category: 'Camilan', image: '/images/french fries.jpg?auto=format&fit=crop&q=80' },
-    { id: 21, name: 'Mix Platter', price: 'Rp 18.000', category: 'Camilan', image: '/images/mix platter.jpg?auto=format&fit=crop&q=80' },
+    { id: 19, name: 'French Fries', price: 'Rp 18.000', category: 'Camilan', image: '/images/french fries.jpg?auto=format&fit=crop&q=80' },
+    { id: 20, name: 'Mix Platter', price: 'Rp 18.000', category: 'Camilan', image: '/images/mix platter.jpg?auto=format&fit=crop&q=80' },
   ];
 
   const [showAll, setShowAll] = useState(false);

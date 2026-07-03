@@ -28,17 +28,7 @@ const About = () => {
                 className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
-            {/* Decorative Card */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="absolute -bottom-10 -right-10 glass-dark p-8 rounded-2xl shadow-2xl hidden md:block z-20"
-            >
-              <h4 className="text-accent text-3xl font-bold mb-1">10+ Tahun</h4>
-              <p className="text-secondary/80 text-sm">Seduhan Sempurna</p>
-            </motion.div>
+      
             
             {/* Background Shape */}
             <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/5 rounded-full -z-0"></div>

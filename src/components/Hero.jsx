@@ -22,7 +22,6 @@ const Hero = () => {
             transition={{ delay: 0.2 }}
             className="text-accent font-medium tracking-[0.3em] uppercase mb-4 block"
           >
-            Pengalaman Kopi Premium
           </motion.span>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl text-primary font-bold mb-6 leading-tight">
@@ -31,8 +30,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-primary/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
-            Temukan kehangatan di setiap cangkir. Biji kopi pilihan dari petani lokal, 
-            disangrai dengan cinta untuk menciptakan momen tak terlupakan.
+            Masih kurang? Mungkin yang kurang cuma KurangKopi. Temukan kopi favoritmu, nikmati suasana yang bikin betah, dan ciptakan momen seru setiap hari.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
