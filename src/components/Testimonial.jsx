@@ -78,7 +78,7 @@ const Testimonial = () => {
                 ))}
               </div>
 
-              <p className="text-secondary/90 text-xl md:text-2xl italic leading-relaxed mb-8">
+              <p className="text-accent/90 text-xl md:text-2xl italic leading-relaxed mb-8">
                 "{testimonials[currentIndex].text}"
               </p>
 

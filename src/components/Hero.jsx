@@ -30,7 +30,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-primary/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
-            Masih kurang? Mungkin yang kurang cuma KurangKopi. Temukan kopi favoritmu, nikmati suasana yang bikin betah, dan ciptakan momen seru setiap hari.
+            Tempat menikmati kopi, berbagi cerita, dan menciptakan momen bersama.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

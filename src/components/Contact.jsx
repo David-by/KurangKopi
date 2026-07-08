@@ -7,7 +7,7 @@ const Contact = () => {
     { icon: <MapPin />, label: 'Lokasi', value: 'Garen, Pandeyan, Kec. Ngemplak, Kabupaten Boyolali, Jawa Tengah 57375' },
     { icon: <Phone />, label: 'WhatsApp', value: '+62 882-2470-4682' },
     { icon: <Mail />, label: 'Instagram', value: 'kurangkopi__' },
-    { icon: <Clock />, label: 'Jam Buka', value: <>17:30 - 01:00 (Senin-Jumat)<br /> 16:30 - 01:00 (Sabtu-Minggu)</> },
+    { icon: <Clock />, label: 'Jam Buka', value: <>17:30 - 01:00 (Senin-Jumat)<br /> 17:00 - 01:00 (Sabtu-Minggu)</> },
   ];
 
   return (
