@@ -63,8 +63,10 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-primary"
+          type="button"
+          className="md:hidden text-primary p-2 focus:outline-none z-50 cursor-pointer"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -74,9 +76,10 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10, height: 0 }}
-            animate={{ opacity: 1, y: 0, height: 'auto' }}
-            exit={{ opacity: 0, y: -10, height: 0 }}
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
             className="absolute top-full left-0 w-full mt-2 bg-white/95 backdrop-blur-xl rounded-3xl border border-primary/10 overflow-hidden shadow-xl md:hidden"
           >
             <div className="flex flex-col p-6 gap-4">
