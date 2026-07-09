@@ -21,7 +21,7 @@ const About = () => {
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/images/gallery/suasana.jpg?auto=format&fit=crop&q=80" 
+                src="/images/galeri/suasana.jpg?auto=format&fit=crop&q=80" 
                 alt="Coffee Brewing" 
                 className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
               />

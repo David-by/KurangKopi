@@ -6,28 +6,28 @@ const Menu = () => {
   const [activeCategory, setActiveCategory] = useState('Kopi');
 
   const menuItems = [
-    { id: 1, name: 'Kopi Susu', price: 'Rp 22.000', category: 'Kopi', image: '/images/kopi susu.jpg?auto=format&fit=crop&q=80' },
-    { id: 2, name: 'Cappucino Hot', price: 'Rp 28.000', category: 'Kopi', image: '/images/cappucino hot.jpg?auto=format&fit=crop&q=80' },
-    { id: 3, name: 'Kopi Tubruk', price: 'Rp 32.000', category: 'Kopi', image: '/images/kopi tubruk.jpg?auto=format&fit=crop&q=80' },
-    { id: 4, name: 'Americano Ice', price: 'Rp 30.000', category: 'Kopi', image: '/images/americano ice.jpg?auto=format&fit=crop&q=80' },
-    { id: 5, name: 'Americano Hot', price: 'Rp 25.000', category: 'Kopi', image: '/images/americano hot.jpg?auto=format&fit=crop&q=120' },
-    { id: 7, name: 'Dirty Latte', price: 'Rp 18.000', category: 'Kopi', image: '/images/dirty latte.jpg?auto=format&fit=crop&q=80' },
-    { id: 8, name: 'Moccachino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/moccachino ice.jpg?auto=format&fit=crop&q=80' },
-    { id: 9, name: 'Cappucino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/cappucino ice.jpg?auto=format&fit=crop&q=80' },
+    { id: 1, name: 'Kopi Susu', price: 'Rp 22.000', category: 'Kopi', image: '/images/kopi/kopi susu.jpg?auto=format&fit=crop&q=80' },
+    { id: 2, name: 'Cappucino Hot', price: 'Rp 28.000', category: 'Kopi', image: '/images/kopi/cappucino hot.jpg?auto=format&fit=crop&q=80' },
+    { id: 3, name: 'Kopi Tubruk', price: 'Rp 32.000', category: 'Kopi', image: '/images/kopi/kopi tubruk.jpg?auto=format&fit=crop&q=80' },
+    { id: 4, name: 'Americano Ice', price: 'Rp 30.000', category: 'Kopi', image: '/images/kopi/americano ice.jpg?auto=format&fit=crop&q=80' },
+    { id: 5, name: 'Americano Hot', price: 'Rp 25.000', category: 'Kopi', image: '/images/kopi/americano hot.jpg?auto=format&fit=crop&q=120' },
+    { id: 7, name: 'Dirty Latte', price: 'Rp 18.000', category: 'Kopi', image: '/images/kopi/dirty latte.jpg?auto=format&fit=crop&q=80' },
+    { id: 8, name: 'Moccachino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/kopi/moccachino ice.jpg?auto=format&fit=crop&q=80' },
+    { id: 9, name: 'Cappucino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/kopi/cappucino ice.jpg?auto=format&fit=crop&q=80' },
 
-    { id: 10, name: 'Chocolate Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/chocolate ice.jpg?auto=format&fit=crop&q=80' },
-    { id: 11, name: 'Matcha Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/matche ice.jpg?auto=format&fit=crop&q=80' },
-    { id: 12, name: 'Redvelvet', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/redvelvet.jpg?auto=format&fit=crop&q=80' },
-    { id: 13, name: 'Matchaberry', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/matchaberry.jpg?auto=format&fit=crop&q=80' },
+    { id: 10, name: 'Chocolate Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/chocolate ice.jpg?auto=format&fit=crop&q=80' },
+    { id: 11, name: 'Matcha Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/matche ice.jpg?auto=format&fit=crop&q=80' },
+    { id: 12, name: 'Redvelvet', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/redvelvet.jpg?auto=format&fit=crop&q=80' },
+    { id: 13, name: 'Matchaberry', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/matchaberry.jpg?auto=format&fit=crop&q=80' },
 
-    { id: 14, name: 'Sruni', price: 'Rp 18.000', category: 'Mocktail', image: '/images/sruni.jpg?auto=format&fit=crop&q=80' },
-    { id: 15, name: 'Lychee Tea', price: 'Rp 18.000', category: 'Mocktail', image: '/images/lychee tea.jpg?auto=format&fit=crop&q=80' },
-    { id: 16, name: 'Samiran', price: 'Rp 18.000', category: 'Mocktail', image: '/images/samiran.jpg?auto=format&fit=crop&q=80' },
-    { id: 17, name: 'Kurko Skyblue', price: 'Rp 18.000', category: 'Mocktail', image: '/images/kurko skyblue.jpg?auto=format&fit=crop&q=80' },
-    { id: 18, name: 'Pressoberry', price: 'Rp 18.000', category: 'Mocktail', image: '/images/pressoberry.jpg?auto=format&fit=crop&q=80' },
+    { id: 14, name: 'Sruni', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/sruni.jpg?auto=format&fit=crop&q=80' },
+    { id: 15, name: 'Lychee Tea', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/lychee tea.jpg?auto=format&fit=crop&q=80' },
+    { id: 16, name: 'Samiran', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/samiran.jpg?auto=format&fit=crop&q=80' },
+    { id: 17, name: 'Kurko Skyblue', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/kurko skyblue.jpg?auto=format&fit=crop&q=80' },
+    { id: 18, name: 'Pressoberry', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/pressoberry.jpg?auto=format&fit=crop&q=80' },
 
-    { id: 19, name: 'French Fries', price: 'Rp 18.000', category: 'Camilan', image: '/images/french fries.jpg?auto=format&fit=crop&q=80' },
-    { id: 20, name: 'Mix Platter', price: 'Rp 18.000', category: 'Camilan', image: '/images/mix platter.jpg?auto=format&fit=crop&q=80' },
+    { id: 19, name: 'French Fries', price: 'Rp 18.000', category: 'Camilan', image: '/images/camilan/french fries.jpg?auto=format&fit=crop&q=80' },
+    { id: 20, name: 'Mix Platter', price: 'Rp 18.000', category: 'Camilan', image: '/images/camilan/mix platter.jpg?auto=format&fit=crop&q=80' },
   ];
 
   const [showAll, setShowAll] = useState(false);

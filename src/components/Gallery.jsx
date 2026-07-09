@@ -4,9 +4,9 @@ import { Instagram } from './Icons';
 
 const Gallery = () => {
   const photos = [
-    { id: 1, url: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80', span: 'col-span-1 row-span-1' },
+    { id: 1, url: '/images/galeri/suasana1.jpg', span: 'col-span-1 row-span-1' },
     { id: 2, url: 'https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80', span: 'col-span-1 row-span-2' },
-    { id: 3, url: '/images/gallery/suasana.jpg', span: 'col-span-2 row-span-1' },
+    { id: 3, url: '/images/galeri/suasana.jpg', span: 'col-span-2 row-span-1' },
     { id: 4, url: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80', span: 'col-span-1 row-span-1' },
     { id: 5, url: 'https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&q=80', span: 'col-span-1 row-span-1' },
   ];
