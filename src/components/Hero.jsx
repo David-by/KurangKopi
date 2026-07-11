@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import heroBg from '../assets/hero_bg.jpg';
 
 
 const Hero = () => {
@@ -7,9 +8,10 @@ const Hero = () => {
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Parallax-like effect */}
       <div 
-        className="absolute inset-0 z-0 bg-hero-pattern bg-cover bg-center bg-fixed"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-scroll"
+        style={{ backgroundImage: `linear-gradient(to bottom, rgba(245, 230, 211, 0.80), rgba(245, 230, 211, 0.70)), url(${heroBg})` }}
       ></div>
-
+ 
       <div className="container mx-auto px-6 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -32,7 +34,7 @@ const Hero = () => {
           <p className="text-primary/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
             Tempat menikmati kopi, berbagi cerita, dan menciptakan momen bersama.
           </p>
-
+ 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
               href="#menu"
@@ -57,8 +59,8 @@ const Hero = () => {
 
 
       {/* Decorative Blur Elements */}
-      <div className="absolute top-1/4 -left-20 w-64 h-64 bg-primary/20 blur-[120px] rounded-full"></div>
-      <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-accent/10 blur-[120px] rounded-full"></div>
+      <div className="absolute top-1/4 -left-20 w-64 h-64 bg-primary/20 blur-[120px] rounded-full pointer-events-none will-change-transform"></div>
+      <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-accent/10 blur-[120px] rounded-full pointer-events-none will-change-transform"></div>
     </section>
   );
 };

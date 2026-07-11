@@ -39,20 +39,24 @@ const Menu = () => {
   return (
     <section id="menu" className="section-padding bg-secondary relative overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-[150px] -z-0"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-[150px] -z-0 pointer-events-none will-change-transform"></div>
 
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
           <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="text-accent font-medium uppercase tracking-widest mb-4 block"
           >
             Menu Spesial
           </motion.span>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl font-bold text-primary mb-6"
           >
             Cicipi Keajaiban di <span className="text-accent italic">Setiap Tegukan</span>
@@ -60,21 +64,29 @@ const Menu = () => {
 
           {/* Category Tabs */}
           <div className="flex flex-wrap justify-center gap-4 mt-10">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => {
-                  setActiveCategory(cat);
-                  setShowAll(false);
-                }}
-                className={`px-8 py-2 rounded-full transition-all duration-300 border font-medium ${activeCategory === cat
-                  ? 'bg-primary border-primary text-white shadow-lg shadow-primary/20'
-                  : 'border-primary/20 text-primary/60 hover:border-primary/40'
-                  }`}
-              >
-                {cat}
-              </button>
-            ))}
+            {categories.map((cat) => {
+              const isActive = activeCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    setActiveCategory(cat);
+                    setShowAll(false);
+                  }}
+                  className="relative px-8 py-2.5 rounded-full border border-primary/20 font-medium cursor-pointer transition-colors duration-300 text-sm md:text-base focus:outline-none select-none overflow-hidden"
+                  style={{ color: isActive ? '#F5E6D3' : '#164E3B' }}
+                >
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeCategoryTab"
+                      className="absolute inset-0 bg-primary -z-10"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                  {cat}
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -88,11 +100,17 @@ const Menu = () => {
               <motion.div
                 key={item.id}
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4 }}
-                className="group glass p-4 rounded-3xl overflow-hidden hover:shadow-2xl hover:shadow-primary/40 transition-all duration-500 hover:-translate-y-2"
+                initial={{ opacity: 0, scale: 0.85, y: 15 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.85, y: 15 }}
+                whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 380, 
+                  damping: 30,
+                  mass: 0.8
+                }}
+                className="group glass p-4 rounded-3xl overflow-hidden hover:shadow-2xl hover:shadow-primary/40"
               >
                 <div className="relative h-64 rounded-2xl overflow-hidden mb-6">
                   <img

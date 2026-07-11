@@ -12,11 +12,11 @@ const About = () => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
-          {/* Image Side */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 1.0, ease: "easeOut" }}
             className="w-full lg:w-1/2 relative"
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
@@ -32,11 +32,11 @@ const About = () => {
             <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/5 rounded-full -z-0"></div>
           </motion.div>
 
-          {/* Text Side */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             className="w-full lg:w-1/2"
           >
             <span className="text-accent font-medium uppercase tracking-widest mb-4 block">Kisah Kami</span>

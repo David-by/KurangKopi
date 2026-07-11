@@ -42,12 +42,24 @@ const Testimonial = () => {
       <Quote className="absolute -bottom-10 -right-10 w-64 h-64 text-secondary/5 rotate-180" />
 
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <span className="text-accent font-medium uppercase tracking-widest mb-4 block">Testimoni</span>
           <h2 className="text-4xl md:text-5xl font-bold text-secondary">Apa Kata <span className="text-accent">Mereka?</span></h2>
-        </div>
+        </motion.div>
 
-        <div className="max-w-4xl mx-auto relative px-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="max-w-4xl mx-auto relative px-12"
+        >
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -102,7 +114,7 @@ const Testimonial = () => {
           >
             <ChevronRight />
           </button>
-        </div>
+        </motion.div>
 
         {/* Indicators */}
         <div className="flex justify-center gap-3 mt-12">

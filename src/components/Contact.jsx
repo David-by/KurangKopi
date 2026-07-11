@@ -13,10 +13,16 @@ const Contact = () => {
   return (
     <section id="contact" className="section-padding bg-secondary">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <span className="text-accent font-medium uppercase tracking-widest mb-4 block">Hubungi Kami</span>
           <h2 className="text-4xl md:text-5xl font-bold text-text">Kunjungi <span className="text-primary">Kami</span></h2>
-        </div>
+        </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-12 items-stretch">
           {/* Info Side */}
