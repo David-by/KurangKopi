@@ -6,28 +6,28 @@ const Menu = () => {
   const [activeCategory, setActiveCategory] = useState('Kopi');
 
   const menuItems = [
-    { id: 1, name: 'Kopi Susu', price: 'Rp 22.000', category: 'Kopi', image: '/images/kopi/kopi susu.jpg?auto=format&fit=crop&q=80', description: 'Perpaduan seimbang espresso premium dengan susu segar manis yang lembut.' },
-    { id: 2, name: 'Cappucino Hot', price: 'Rp 28.000', category: 'Kopi', image: '/images/kopi/cappucino hot.jpg?auto=format&fit=crop&q=80', description: 'Espresso pekat dengan foam susu tebal dan taburan bubuk cokelat.' },
-    { id: 3, name: 'Kopi Tubruk', price: 'Rp 32.000', category: 'Kopi', image: '/images/kopi/kopi tubruk.jpg?auto=format&fit=crop&q=80', description: 'Kopi hitam tradisional Nusantara yang diseduh langsung bersama ampasnya untuk rasa pekat maksimal.' },
-    { id: 4, name: 'Americano Ice', price: 'Rp 30.000', category: 'Kopi', image: '/images/kopi/americano ice.jpg?auto=format&fit=crop&q=80', description: 'Espresso dingin yang segar dan ringan, cocok untuk menemani hari yang panas.' },
-    { id: 5, name: 'Americano Hot', price: 'Rp 25.000', category: 'Kopi', image: '/images/kopi/americano hot.jpg?auto=format&fit=crop&q=120', description: 'Espresso panas murni dengan tambahan air untuk cita rasa kopi hitam yang bersih dan aromatik.' },
-    { id: 7, name: 'Dirty Latte', price: 'Rp 18.000', category: 'Kopi', image: '/images/kopi/dirty latte.jpg?auto=format&fit=crop&q=80', description: 'Espresso yang dituang perlahan di atas susu dingin berlemak untuk sensasi rasa yang unik.' },
-    { id: 8, name: 'Moccachino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/kopi/moccachino ice.jpg?auto=format&fit=crop&q=80', description: 'Kopi susu dingin dengan sentuhan rasa cokelat premium yang manis dan lezat.' },
-    { id: 9, name: 'Cappucino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/kopi/cappucino ice.jpg?auto=format&fit=crop&q=80', description: 'Espresso dingin dengan foam susu lembut yang menyegarkan.' },
+    { id: 1, name: 'Kopi Susu', price: 'Rp 22.000', category: 'Kopi', image: '/images/kopi/kopi-susu.jpg?auto=format&fit=crop&q=80', description: 'Perpaduan seimbang espresso premium dengan susu segar manis yang lembut.' },
+    { id: 2, name: 'Cappucino Hot', price: 'Rp 28.000', category: 'Kopi', image: '/images/kopi/cappucino-hot.jpg?auto=format&fit=crop&q=80', description: 'Espresso pekat dengan foam susu tebal dan taburan bubuk cokelat.' },
+    { id: 3, name: 'Kopi Tubruk', price: 'Rp 32.000', category: 'Kopi', image: '/images/kopi/kopi-tubruk.jpg?auto=format&fit=crop&q=80', description: 'Kopi hitam tradisional Nusantara yang diseduh langsung bersama ampasnya untuk rasa pekat maksimal.' },
+    { id: 4, name: 'Americano Ice', price: 'Rp 30.000', category: 'Kopi', image: '/images/kopi/americano-ice.jpg?auto=format&fit=crop&q=80', description: 'Espresso dingin yang segar dan ringan, cocok untuk menemani hari yang panas.' },
+    { id: 5, name: 'Americano Hot', price: 'Rp 25.000', category: 'Kopi', image: '/images/kopi/americano-hot.jpg?auto=format&fit=crop&q=120', description: 'Espresso panas murni dengan tambahan air untuk cita rasa kopi hitam yang bersih dan aromatik.' },
+    { id: 7, name: 'Dirty Latte', price: 'Rp 18.000', category: 'Kopi', image: '/images/kopi/dirty-latte.jpg?auto=format&fit=crop&q=80', description: 'Espresso yang dituang perlahan di atas susu dingin berlemak untuk sensasi rasa yang unik.' },
+    { id: 8, name: 'Moccachino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/kopi/moccachino-ice.jpg?auto=format&fit=crop&q=80', description: 'Kopi susu dingin dengan sentuhan rasa cokelat premium yang manis dan lezat.' },
+    { id: 9, name: 'Cappucino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/kopi/cappucino-ice.jpg?auto=format&fit=crop&q=80', description: 'Espresso dingin dengan foam susu lembut yang menyegarkan.' },
 
-    { id: 10, name: 'Chocolate Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/chocolate ice.jpg?auto=format&fit=crop&q=80', description: 'Minuman cokelat dingin yang kental, manis, dan kaya rasa.' },
-    { id: 11, name: 'Matcha Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/matche ice.jpg?auto=format&fit=crop&q=80', description: 'Teh hijau matcha khas Jepang yang dipadu dengan susu segar dingin yang creamy.' },
+    { id: 10, name: 'Chocolate Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/chocolate-ice.jpg?auto=format&fit=crop&q=80', description: 'Minuman cokelat dingin yang kental, manis, dan kaya rasa.' },
+    { id: 11, name: 'Matcha Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/matcha-ice.jpg?auto=format&fit=crop&q=80', description: 'Teh hijau matcha khas Jepang yang dipadu dengan susu segar dingin yang creamy.' },
     { id: 12, name: 'Redvelvet', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/redvelvet.jpg?auto=format&fit=crop&q=80', description: 'Minuman red velvet manis lembut dengan rasa khas kue yang gurih.' },
     { id: 13, name: 'Matchaberry', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/matchaberry.jpg?auto=format&fit=crop&q=80', description: 'Perpaduan unik teh hijau matcha dengan rasa segar buah stroberi.' },
 
     { id: 14, name: 'Sruni', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/sruni.jpg?auto=format&fit=crop&q=80', description: 'Mocktail segar khas Kurang Kopi dengan cita rasa asam manis yang unik.' },
-    { id: 15, name: 'Lychee Tea', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/lychee tea.jpg?auto=format&fit=crop&q=80', description: 'Teh manis dingin yang dipadu dengan buah leci segar.' },
+    { id: 15, name: 'Lychee Tea', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/lychee-tea.jpg?auto=format&fit=crop&q=80', description: 'Teh manis dingin yang dipadu dengan buah leci segar.' },
     { id: 16, name: 'Samiran', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/samiran.jpg?auto=format&fit=crop&q=80', description: 'Mocktail kopi dengan rasa buah segar yang mendinginkan dahaga.' },
-    { id: 17, name: 'Kurko Skyblue', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/kurko skyblue.jpg?auto=format&fit=crop&q=80', description: 'Mocktail berwarna biru langit yang segar dengan sensasi soda manis.' },
+    { id: 17, name: 'Kurko Skyblue', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/kurko-skyblue.jpg?auto=format&fit=crop&q=80', description: 'Mocktail berwarna biru langit yang segar dengan sensasi soda manis.' },
     { id: 18, name: 'Pressoberry', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/pressoberry.jpg?auto=format&fit=crop&q=80', description: 'Kombinasi unik espresso dengan kesegaran sirup buah beri yang asam manis.' },
 
-    { id: 19, name: 'French Fries', price: 'Rp 18.000', category: 'Camilan', image: '/images/camilan/french fries.jpg?auto=format&fit=crop&q=80', description: 'Kentang goreng gurih dan renyah, disajikan hangat dengan saus pilihan.' },
-    { id: 20, name: 'Mix Platter', price: 'Rp 18.000', category: 'Camilan', image: '/images/camilan/mix platter.jpg?auto=format&fit=crop&q=80', description: 'Kombinasi berbagai camilan renyah yang cocok untuk dinikmati bersama teman.' },
+    { id: 19, name: 'French Fries', price: 'Rp 18.000', category: 'Camilan', image: '/images/camilan/french-fries.jpg?auto=format&fit=crop&q=80', description: 'Kentang goreng gurih dan renyah, disajikan hangat dengan saus pilihan.' },
+    { id: 20, name: 'Mix Platter', price: 'Rp 18.000', category: 'Camilan', image: '/images/camilan/mix-platter.jpg?auto=format&fit=crop&q=80', description: 'Kombinasi berbagai camilan renyah yang cocok untuk dinikmati bersama teman.' },
   ];
 
   const [showAll, setShowAll] = useState(false);
