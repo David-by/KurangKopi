@@ -31,10 +31,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <motion.a
+        <a
           href="#home"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
           className="flex flex-col items-center justify-center group"
         >
           <img 
@@ -42,22 +40,19 @@ const Navbar = () => {
             alt="Kurang Kopi Logo" 
             className="h-9 md:h-11 w-auto object-contain"
           />
-        </motion.a>
+        </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link, index) => (
-            <motion.a
+          {navLinks.map((link) => (
+            <a
               key={link.name}
               href={link.href}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
               className="text-primary font-semibold transition-colors relative group"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </motion.a>
+            </a>
           ))}
         </div>
 

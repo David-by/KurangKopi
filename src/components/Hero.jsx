@@ -59,8 +59,8 @@ const Hero = () => {
 
 
       {/* Decorative Blur Elements */}
-      <div className="absolute top-1/4 -left-20 w-64 h-64 bg-primary/20 blur-[120px] rounded-full pointer-events-none will-change-transform"></div>
-      <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-accent/10 blur-[120px] rounded-full pointer-events-none will-change-transform"></div>
+      <div className="absolute top-1/4 -left-20 w-64 h-64 bg-primary/20 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-accent/10 blur-[120px] rounded-full pointer-events-none"></div>
     </section>
   );
 };

@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary py-10 relative overflow-hidden">
       {/* Decorative Blur */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[150px] bg-white/5 blur-[100px] rounded-full -z-0 pointer-events-none will-change-transform"></div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[150px] bg-white/5 blur-[100px] rounded-full -z-0 pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 items-start">
@@ -32,7 +32,7 @@ const Footer = () => {
               {[
                 { Icon: Instagram, href: "https://www.instagram.com/kurangkopi__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
                 { Icon: Tiktok, href: "https://www.tiktok.com/@kurangkopi_?is_from_webapp=1&sender_device=pc" },
-                { Icon: Whatsapp, href: "https://wa.me/" }
+                { Icon: Whatsapp, href: "https://wa.me/6282135230971" }
               ].map((social, i) => (
                 <motion.a
                   key={i}

@@ -23,6 +23,8 @@ const About = () => {
               <img 
                 src="/images/galeri/suasana.jpg?auto=format&fit=crop&q=80" 
                 alt="Coffee Brewing" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
