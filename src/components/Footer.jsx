@@ -1,9 +1,12 @@
 import React from 'react';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, Lock } from 'lucide-react';
 import { Instagram, Tiktok, Whatsapp } from './Icons';
 import { motion } from 'framer-motion';
+import { useCMS } from '../context/CMSContext';
 
 const Footer = () => {
+  const { settings, isAdminLoggedIn } = useCMS();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -26,13 +29,13 @@ const Footer = () => {
               />
             </a>
             <p className="text-white/70 text-sm leading-relaxed max-w-md">
-              Tumbuh menjadi ruang pertama yang menyajikan kopi autentik, diiringi kehangatan suasana rumah, tempat di mana setiap tawa, percakapan, dan kisah terjalin hangat.
+              {settings.tagline || 'Tumbuh menjadi ruang pertama yang menyajikan kopi autentik, diiringi kehangatan suasana rumah.'}
             </p>
             <div className="flex gap-3 mt-2">
               {[
                 { Icon: Instagram, href: "https://www.instagram.com/kurangkopi__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
                 { Icon: Tiktok, href: "https://www.tiktok.com/@kurangkopi_?is_from_webapp=1&sender_device=pc" },
-                { Icon: Whatsapp, href: "https://wa.me/6282135230971" }
+                { Icon: Whatsapp, href: `https://wa.me/${(settings.phone || '').replace(/[^0-9]/g, '')}` }
               ].map((social, i) => (
                 <motion.a
                   key={i}
@@ -72,14 +75,23 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-white/10 flex justify-between items-center gap-4">
-          <p className="text-white/50 text-xs">
-            © {new Date().getFullYear()} <span className="text-white/80 font-bold">Kurang Kopi</span>. All rights reserved.
-          </p>
+        <div className="pt-6 border-t border-white/10 flex flex-wrap justify-between items-center gap-4">
+          <div className="flex items-center gap-4">
+            <p className="text-white/50 text-xs">
+              © {new Date().getFullYear()} <span className="text-white/80 font-bold">{settings.shopName || 'Kurang Kopi'}</span>. All rights reserved.
+            </p>
+            <a
+              href={isAdminLoggedIn ? '#admin' : '#admin-login'}
+              className="text-[11px] text-white/40 hover:text-accent flex items-center gap-1 transition-colors underline"
+            >
+              <Lock size={12} />
+              {isAdminLoggedIn ? 'Dashboard Admin' : 'Admin Portal'}
+            </a>
+          </div>
 
           <button
             onClick={scrollToTop}
-            className="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-all"
+            className="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-all cursor-pointer"
             aria-label="Scroll to top"
           >
             <ArrowUp size={18} />

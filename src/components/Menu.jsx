@@ -1,38 +1,13 @@
 import React, { useState } from 'react';
+import { useCMS } from '../context/CMSContext';
 
 const Menu = () => {
+  const { menus } = useCMS();
   const categories = ['Kopi', 'Non-Kopi', 'Mocktail', 'Camilan'];
   const [activeCategory, setActiveCategory] = useState('Kopi');
-
-  const menuItems = [
-    { id: 1, name: 'Kopi Susu', price: 'Rp 22.000', category: 'Kopi', image: '/images/kopi/kopi-susu.jpg?auto=format&fit=crop&q=80', description: 'Perpaduan seimbang espresso premium dengan susu segar manis yang lembut.' },
-    { id: 2, name: 'Cappucino Hot', price: 'Rp 28.000', category: 'Kopi', image: '/images/kopi/cappucino-hot.jpg?auto=format&fit=crop&q=80', description: 'Espresso pekat dengan foam susu tebal dan taburan bubuk cokelat.' },
-    { id: 3, name: 'Kopi Tubruk', price: 'Rp 32.000', category: 'Kopi', image: '/images/kopi/kopi-tubruk.jpg?auto=format&fit=crop&q=80', description: 'Kopi hitam tradisional Nusantara yang diseduh langsung bersama ampasnya untuk rasa pekat maksimal.' },
-    { id: 4, name: 'Americano Ice', price: 'Rp 30.000', category: 'Kopi', image: '/images/kopi/americano-ice.jpg?auto=format&fit=crop&q=80', description: 'Espresso dingin yang segar dan ringan, cocok untuk menemani hari yang panas.' },
-    { id: 5, name: 'Americano Hot', price: 'Rp 25.000', category: 'Kopi', image: '/images/kopi/americano-hot.jpg?auto=format&fit=crop&q=120', description: 'Espresso panas murni dengan tambahan air untuk cita rasa kopi hitam yang bersih dan aromatik.' },
-    { id: 7, name: 'Dirty Latte', price: 'Rp 18.000', category: 'Kopi', image: '/images/kopi/dirty-latte.jpg?auto=format&fit=crop&q=80', description: 'Espresso yang dituang perlahan di atas susu dingin berlemak untuk sensasi rasa yang unik.' },
-    { id: 8, name: 'Moccachino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/kopi/moccachino-ice.jpg?auto=format&fit=crop&q=80', description: 'Kopi susu dingin dengan sentuhan rasa cokelat premium yang manis dan lezat.' },
-    { id: 9, name: 'Cappucino Ice', price: 'Rp 18.000', category: 'Kopi', image: '/images/kopi/cappucino-ice.jpg?auto=format&fit=crop&q=80', description: 'Espresso dingin dengan foam susu lembut yang menyegarkan.' },
-
-    { id: 10, name: 'Chocolate Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/chocolate-ice.jpg?auto=format&fit=crop&q=80', description: 'Minuman cokelat dingin yang kental, manis, dan kaya rasa.' },
-    { id: 11, name: 'Matcha Ice', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/matcha-ice.jpg?auto=format&fit=crop&q=80', description: 'Teh hijau matcha khas Jepang yang dipadu dengan susu segar dingin yang creamy.' },
-    { id: 12, name: 'Redvelvet', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/redvelvet.jpg?auto=format&fit=crop&q=80', description: 'Minuman red velvet manis lembut dengan rasa khas kue yang gurih.' },
-    { id: 13, name: 'Matchaberry', price: 'Rp 18.000', category: 'Non-Kopi', image: '/images/nonkopi/matchaberry.jpg?auto=format&fit=crop&q=80', description: 'Perpaduan unik teh hijau matcha dengan rasa segar buah stroberi.' },
-
-    { id: 14, name: 'Sruni', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/sruni.jpg?auto=format&fit=crop&q=80', description: 'Mocktail segar khas Kurang Kopi dengan cita rasa asam manis yang unik.' },
-    { id: 15, name: 'Lychee Tea', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/lychee-tea.jpg?auto=format&fit=crop&q=80', description: 'Teh manis dingin yang dipadu dengan buah leci segar.' },
-    { id: 16, name: 'Samiran', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/samiran.jpg?auto=format&fit=crop&q=80', description: 'Mocktail kopi dengan rasa buah segar yang mendinginkan dahaga.' },
-    { id: 17, name: 'Kurko Skyblue', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/kurko-skyblue.jpg?auto=format&fit=crop&q=80', description: 'Mocktail berwarna biru langit yang segar dengan sensasi soda manis.' },
-    { id: 18, name: 'Pressoberry', price: 'Rp 18.000', category: 'Mocktail', image: '/images/mocktail/pressoberry.jpg?auto=format&fit=crop&q=80', description: 'Kombinasi unik espresso dengan kesegaran sirup buah beri yang asam manis.' },
-
-    { id: 19, name: 'French Fries', price: 'Rp 18.000', category: 'Camilan', image: '/images/camilan/french-fries.jpg?auto=format&fit=crop&q=80', description: 'Kentang goreng gurih dan renyah, disajikan hangat dengan saus pilihan.' },
-    { id: 20, name: 'Mix Platter', price: 'Rp 18.000', category: 'Camilan', image: '/images/camilan/mix-platter.jpg?auto=format&fit=crop&q=80', description: 'Kombinasi berbagai camilan renyah yang cocok untuk dinikmati bersama teman.' },
-  ];
-
   const [showAll, setShowAll] = useState(false);
 
-  const filteredItems = menuItems.filter(item => item.category === activeCategory);
-
+  const filteredItems = menus.filter(item => item.category === activeCategory);
   const displayedItems = showAll ? filteredItems : filteredItems.slice(0, 6);
 
   return (
@@ -62,7 +37,7 @@ const Menu = () => {
                   }}
                   className={`relative px-8 py-2.5 rounded-full border font-medium cursor-pointer transition-all duration-300 text-sm md:text-base focus:outline-none select-none overflow-hidden ${
                     isActive 
-                      ? 'bg-primary text-secondary border-primary' 
+                      ? 'bg-primary text-secondary border-primary shadow-lg' 
                       : 'text-primary border-primary/20 hover:bg-primary/5'
                   }`}
                 >
@@ -78,37 +53,47 @@ const Menu = () => {
           key={activeCategory}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {displayedItems.map((item, index) => (
-            <div
-              key={item.id}
-              style={{ animationDelay: `${index * 50}ms` }}
-              className="group glass p-4 rounded-3xl overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 animate-menu-item"
-            >
-              <div className="relative h-64 rounded-2xl overflow-hidden mb-6">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-4 right-4 bg-primary/80 backdrop-blur-md text-secondary px-4 py-1 rounded-full text-sm font-bold">
-                  {item.category}
-                </div>
-              </div>
-              <div className="px-2">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors">
-                    {item.name}
-                  </h3>
-                  <span className="text-accent font-bold">{item.price}</span>
-                </div>
-                <p className="text-primary/60 text-sm leading-relaxed mb-6">
-                  {item.description || 'Dibuat dengan bahan-bahan segar berkualitas tinggi untuk menjamin cita rasa yang konsisten.'}
-                </p>
-              </div>
+          {displayedItems.length === 0 ? (
+            <div className="col-span-full text-center py-12 text-primary/60 font-medium">
+              Belum ada menu untuk kategori {activeCategory}. Tambahkan melalui Dashboard Admin CMS.
             </div>
-          ))}
+          ) : (
+            displayedItems.map((item, index) => (
+              <div
+                key={item.id}
+                style={{ animationDelay: `${index * 50}ms` }}
+                className="group glass p-4 rounded-3xl overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 animate-menu-item"
+              >
+                <div className="relative h-64 rounded-2xl overflow-hidden mb-6 bg-primary/10">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = '/images/kopi/kopi-susu.jpg';
+                    }}
+                  />
+                  <div className="absolute top-4 right-4 bg-primary/80 backdrop-blur-md text-secondary px-4 py-1 rounded-full text-sm font-bold">
+                    {item.category}
+                  </div>
+                </div>
+                <div className="px-2">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors">
+                      {item.name}
+                    </h3>
+                    <span className="text-accent font-bold">{item.price}</span>
+                  </div>
+                  <p className="text-primary/60 text-sm leading-relaxed mb-6">
+                    {item.description || 'Dibuat dengan bahan-bahan segar berkualitas tinggi untuk menjamin cita rasa yang konsisten.'}
+                  </p>
+                </div>
+              </div>
+            ))
+          )}
         </div>
 
         {filteredItems.length > 6 && (
